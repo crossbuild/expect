@@ -394,7 +394,7 @@ expect:	exp_main_exp.o $(PKG_LIB_FILE)
 		-o expect exp_main_exp.o \
 		@EXP_BUILD_LIB_SPEC@ \
 		@TCL_LIB_SPEC@ \
-		@TCL_DL_LIBS@ @PKG_LIBS@ @MATH_LIBS@ \
+		@TCL_DL_LIBS@ @PKG_LIBS@ -lutil @MATH_LIBS@ \
 		@TCL_CC_SEARCH_FLAGS@ \
 		@EXP_CC_SEARCH_FLAGS@
 	$(SETUID) expect
